@@ -1,0 +1,90 @@
+list.c:11:8: error: stray ‘\342’ in program
+ struct List ∗next ;
+        ^
+list.c:11:8: error: stray ‘\210’ in program
+list.c:11:8: error: stray ‘\227’ in program
+list.c:11:16: error: field ‘next’ has incomplete type
+ struct List ∗next ;
+                ^
+list.c: In function ‘Add’:
+list.c:25:21: warning: incompatible implicit declaration of built-in function ‘malloc’ [enabled by default]
+     List* newList = malloc(sizeof(List));
+                     ^
+list.c: In function ‘printList’:
+list.c:54:33: error: invalid type argument of ‘->’ (have ‘Occorrenza’)
+         printf("%d",list->parola->stringa); // ?  facciamo qualche prova nel main che non lo so manco io
+                                 ^
+list.c: In function ‘main’:
+list.c:73:18: error: expected ‘)’ before ‘o’
+     printf("%c%d"o.stringa,o.n); //non so che cazzo sto facendo non chiederlo a me
+                  ^
+list.c:73:18: warning: format ‘%c’ expects a matching ‘int’ argument [-Wformat=]
+list.c:73:18: warning: format ‘%d’ expects a matching ‘int’ argument [-Wformat=]
+list.c:77:14: warning: incompatible implicit declaration of built-in function ‘malloc’ [enabled by default]
+     List l = malloc(sizeof(List));
+              ^
+list.c:77:5: error: invalid initializer
+     List l = malloc(sizeof(List));
+     ^
+list.c:79:28: error: ‘node_t’ undeclared (first use in this function)
+     l.next = malloc(sizeof(node_t));
+                            ^
+list.c:79:28: note: each undeclared identifier is reported only once for each function it appears in
+list.c:80:6: error: invalid type argument of ‘->’ (have ‘List’)
+     l->next->parola->v;
+      ^
+list.c:81:6: error: invalid type argument of ‘->’ (have ‘List’)
+     l->next->next->NULL;
+      ^
+In file included from /usr/include/_G_config.h:15:0,
+                 from /usr/include/libio.h:31,
+                 from /usr/include/stdio.h:74,
+                 from list.c:1:
+list.c:81:20: error: expected identifier before ‘(’ token
+     l->next->next->NULL;
+                    ^
+loccio:~/workspace/project $ gcc list.c >> debug.txt
+list.c:11:8: error: stray ‘\342’ in program
+ struct List ∗next ;
+        ^
+list.c:11:8: error: stray ‘\210’ in program
+list.c:11:8: error: stray ‘\227’ in program
+list.c:11:16: error: field ‘next’ has incomplete type
+ struct List ∗next ;
+                ^
+list.c: In function ‘Add’:
+list.c:25:21: warning: incompatible implicit declaration of built-in function ‘malloc’ [enabled by default]
+     List* newList = malloc(sizeof(List));
+                     ^
+list.c: In function ‘printList’:
+list.c:54:33: error: invalid type argument of ‘->’ (have ‘Occorrenza’)
+         printf("%d",list->parola->stringa); // ?  facciamo qualche prova nel main che non lo so manco io
+                                 ^
+list.c: In function ‘main’:
+list.c:73:18: error: expected ‘)’ before ‘o’
+     printf("%c%d"o.stringa,o.n); //non so che cazzo sto facendo non chiederlo a me
+                  ^
+list.c:73:18: warning: format ‘%c’ expects a matching ‘int’ argument [-Wformat=]
+list.c:73:18: warning: format ‘%d’ expects a matching ‘int’ argument [-Wformat=]
+list.c:77:14: warning: incompatible implicit declaration of built-in function ‘malloc’ [enabled by default]
+     List l = malloc(sizeof(List));
+              ^
+list.c:77:5: error: invalid initializer
+     List l = malloc(sizeof(List));
+     ^
+list.c:79:28: error: ‘node_t’ undeclared (first use in this function)
+     l.next = malloc(sizeof(node_t));
+                            ^
+list.c:79:28: note: each undeclared identifier is reported only once for each function it appears in
+list.c:80:6: error: invalid type argument of ‘->’ (have ‘List’)
+     l->next->parola->v;
+      ^
+list.c:81:6: error: invalid type argument of ‘->’ (have ‘List’)
+     l->next->next->NULL;
+      ^
+In file included from /usr/include/_G_config.h:15:0,
+                 from /usr/include/libio.h:31,
+                 from /usr/include/stdio.h:74,
+                 from list.c:1:
+list.c:81:20: error: expected identifier before ‘(’ token
+     l->next->next->NULL;

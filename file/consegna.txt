@@ -1,0 +1,60 @@
+/*ROBA DA FARE
+struttura dati: lista occorrenze
+-c'è da fare la lista e gli algoritmi per gestirla oppure trovarne una già fatta in qualche libreria
+
+algoritmo:
+
+1 lettura dell'input
+-Stringa input file
+-array flag opzioni
+
+2 array OPZIONI. se nell'input c'è l'opzione i flag[i]= (un valore >0), di default 0
+- 0 output  scelta file output
+– 1 help e -h: stampa a video l'help del programma;
+– 2 recursive e -r: se viene passato questo argomento, nella collezione delle informazioni di una directory vengono seguite tutte le sottodirectory;
+– 3 follow e -f: nell'elaborazione di una directory vengono seguiti i link;
+– 4 explude <file> e -e <file>: <file> non viene considerato nell'elaborazione (questo parametro ha senso solo se si sta elaborando una directory);
+– 5 alpha e -a: vengono considerate nella statistica solo le parole contenenti caratteri alfabetici;
+– 6 min <num> e -m <num>: vengono considerate nella statistiche solo le parole con una lunghezza maggiore o uguale a <num>;
+– 7 ignore <file> e -i <file>: <file> è un elenco di parole (una per riga) che vengono ignorate nella statistica;
+– 8 sortbyoccurrency e -sbo: le parole vengono inserite nel file di output ordinate per numero di occorrenze.
+
+3 rilevamento dei file da elaborare
+-lettura stringa input file + opzioni relative all'input
+-flag[1]=1 -> output help
+-rilevamento di tutti i file da elaborare considerando sottodirectory (flag[2]) e link (flag[3]) (che cazzo intende il prof per link?)
+-rimuovo file da non considerare (flag[4])
+
+4 algoritmo riconoscimento e ricerca parole. Per ogni file lancio un thread o processo che:
+-riconosce una parola
+-valuta se la parola è da considerare oppure no (flag[5] [flag[6] flag[7])
+-aggiunge la parola ad una lista o se già presente incrementa il numero di occorrenze
+-ritorna la lista al programma principale
+
+
+(non ho capito se nel file di output deve esserci una elenco per ogni file o un unico elenco per tutti i file o un file di output per ogni file)
+uno unico per tutti   http://didattica.cs.unicam.it/doku.php?id=didattica:triennale:so:ay_1718:progettogiugnoluglio
+
+5 composizione e ordinamento lista finale in base alle opzioni e alle liste ritornate precedentemente
+-ordinamento alfabetico
+-ordinamento per occorrenze (flag[8])
+
+6 output lista nel file
+-flag[0]= 0 -> swordx.out
+-flag[0]= 1 -> ????.out
+*/
+
+
+/*
+Per me si deve fare con la fork 
+una fork per ogni file 
+che mano a mano scrivono su swordx.out
+
+*/
+
+/*
+  argc = Numero dei parametri che si passano al programma
+  
+  *argv[] = Parametri che passati (argv[0] è sempre uguale al nome del programma) 
+  
+*/
